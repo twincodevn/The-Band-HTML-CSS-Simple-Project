@@ -14,6 +14,13 @@
 4. kiểu dáng( kiểu chữ)
 */
 
+
+/* common */
+
+.text-center {
+    text-align: center;
+}
+
 .text-white {
     color: #fff !important;
 }
@@ -21,6 +28,46 @@
 .clear {
     clear: both;
 }
+
+.row {
+    margin-left: -18px;
+    margin-right: -18px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+
+/* Main */
 
 html {
     scroll-behavior: smooth;
@@ -54,11 +101,21 @@ html {
     font-size: 14px;
 }
 
+.menu-btn {
+    color: white;
+}
+
+.menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
 
+.menu-btn,
 #header .search-btn {
     float: right;
     line-height: 46px;
@@ -116,7 +173,7 @@ li {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('../img/slider/slider3.jpg') top center / cover no-repeat;
+    background: url('../img/slider/slider1.jpg') top center / cover no-repeat;
 }
 
 p.text-description {
@@ -139,11 +196,11 @@ h1.text-heading {
 
 #content .content-section {
     width: 800px;
-    padding-left: 24.5px;
-    padding-right: 24.5px;
     padding-top: 64px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 18px;
 }
 
 #content .section-heading {
@@ -169,11 +226,6 @@ h1.text-heading {
     text-align: justify;
 }
 
-#content .member-item {
-    width: 33.33%;
-    float: left;
-}
-
 #content .member-name {
     padding: 15px 0;
     font-size: 15px;
@@ -187,7 +239,6 @@ h1.text-heading {
 
 #content .member-list {
     padding-top: 47px;
-    text-align: center;
 }
 
 #content .content-tourdate {
@@ -195,7 +246,7 @@ h1.text-heading {
 }
 
 .tour-section {
-    padding-bottom: 100px;
+    padding-bottom: 64px;
     margin-top: 96px;
     background-color: #000;
 }
@@ -231,68 +282,59 @@ h1.text-heading {
     height: 24px;
 }
 
-.place-tour {
+.places-list {
+    margin-top: 32px;
+    margin-bottom: 38px;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-img {
+    width: 100%;
     display: block;
-    padding-top: 32px;
 }
 
-.place-tour .img {
-    width: 245.323px;
-    height: 184px;
-    display: block;
-}
-
-.place-part {
-    margin-right: 2px;
-    display: inline-block;
-}
-
-.info {
-    width: 245.323px;
-    height: 184px;
+.place-body {
+    font-size: 15px;
     background-color: #fff;
     border: none;
-    padding: 0.15px 16px;
+    padding: 16px;
 }
 
-.place-name {
-    font-style: oblique;
+.place-heading {
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.place-time {
+    color: #757575;
     margin: 15px 0;
 }
 
-.place-date {
-    opacity: 0.6;
-    margin: 15px 0;
-}
-
-.place-content {
-    margin-bottom: 15px;
-}
-
-.buy-ticket {
+.place-buy-btn {
     background-color: #000;
     color: #fff;
     font-size: 15px;
-    padding: 8px 16px;
+    padding: 8px 10px;
+    display: inline-block;
+    margin-top: 20px;
 }
 
-.buy-ticket:hover {
+.place-buy-btn:hover {
+    color: black;
     background-color: #ccc;
     border: 2px solid #ccc;
 }
 
 .contact-part {
-    padding-bottom: 170px;
+    padding-bottom: 64px;
 }
 
 .contact-icon>li {
     list-style-type: none;
     padding-bottom: 10px;
-}
-
-.pad {
-    font-size: 18px;
-    padding-right: 20px;
 }
 
 .total-contact {
@@ -305,48 +347,43 @@ h1.text-heading {
     left: 380px;
 }
 
-.name {
-    padding-left: 10px;
-    width: 165px;
-    height: 38px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+
+/*Contact form*/
+
+.contact-form {
+    font-size: 15px;
 }
 
-.email {
-    padding-left: 10px;
-    border: 1px solid #ccc;
-    width: 179px;
-    height: 38px;
-    margin-bottom: 10px;
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-.message {
-    border: 1px solid #ccc;
-    width: 369px;
-    height: 38px;
-    padding-left: 10px;
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
 }
 
-.button-send {
-    margin-top: 20px;
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-submit-btn {
+    font-size: 15px;
+    color: white;
+    background-color: #000;
+    border: 1px solid #ccc;
+    padding: 10px 16px;
     float: right;
-    height: 38px;
-    background-color: black;
-    color: #fff;
-    width: 70px;
-    text-align: center;
-}
-
-.button-send:hover {
-    background-color: #ccc;
-    color: #000;
-    border: 1px solid #ccc;
 }
 
 .map {
-    height: 494px;
     width: 100%;
 }
 
